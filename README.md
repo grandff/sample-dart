@@ -77,5 +77,13 @@ dart 기본 강의
 ```
 
 ## 1.6 Constant Varaibles
+- js와 ts의 constant 와 다름
+- final은 실행 중에 값이 결정되는 반면, const는 컴파일시 값이 결정됨
+- 이 파일을 컴파일할 때 기계어로 번역될 때 값이 결정됨
 
-## 1.7 Recap
+```dart
+    const name = 'nico';
+    name = '12';    // impossible... 마찬가지로 값을 할당을 못함
+
+    const API = '121212';
+```
