@@ -52,6 +52,7 @@ dart 기본 강의
 
 ## 1.4 Final Variables
 - 수정 불가능한 변수 선언
+- 선언과 동시에 값이 할당되야함
 - var 대신해서 사용함
   
 ```dart
@@ -62,6 +63,18 @@ dart 기본 강의
 ```
 
 ## 1.5 Late Variables
+- var 또는 final 앞에 붙어야함
+- 값 할당을 나중에 할 수 있음
+- final은 한번만 할당하고 끝이지만, late를 쓰면 나중에 할당하고 그 값을 변경하지 않게 할 수 있음
+
+```dart
+    late final name;
+    // do something, go to api ...
+    print(name);        // 나중에 할당될줄 알기 때문에 해당 함수는 실행되지 않음
+    name = 'nico';
+    print(name);        // possible... 값이 할당되어있기 때문에
+    name = '12';        // impossible... still final variable
+```
 
 ## 1.6 Constant Varaibles
 
