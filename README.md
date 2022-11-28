@@ -49,3 +49,20 @@ dart 기본 강의
 
     nano?.isNotEmpty;   // 위의 조건문과 동일함
 ```
+
+## 1.4 Final Variables
+- 수정 불가능한 변수 선언
+- var 대신해서 사용함
+  
+```dart
+    final name = 'nico';
+    name = 'nico';      // impossible...
+
+    final String name2 = 'nico';    // possible...
+```
+
+## 1.5 Late Variables
+
+## 1.6 Constant Varaibles
+
+## 1.7 Recap
