@@ -32,3 +32,20 @@ dart 기본 강의
     }
     // 바깥으로 나오면 name에 값이 할당되지 않으면 어떤 형태인지 모름
 ```
+
+## 1.3 Nullable Variables
+- 해당 변수에 null이 올 수도 있다고 암시해줌
+
+```dart
+    String nico = 'nico';
+    nico = null;        // impossible...
+
+    String? nano = 'nano';
+    nano = null;        // possible...
+
+    if(nano != null){
+        nano.isNotEmpty;
+    }
+
+    nano?.isNotEmpty;   // 위의 조건문과 동일함
+```
