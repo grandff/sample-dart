@@ -19,3 +19,16 @@ dart 기본 강의
 ```
 
 ## 1.2 Dynamic Type
+- dynamic 키워드를 통해 할당된 값에 따라 형태 변환이 가능
+
+```dart
+    dynamic name;
+    name = 'nico';
+    name = 123;
+    name = true;
+
+    if(name is String){
+        // 이 조건문 안에서는 name이 String 이라는걸 인식함
+    }
+    // 바깥으로 나오면 name에 값이 할당되지 않으면 어떤 형태인지 모름
+```
