@@ -127,7 +127,21 @@ dart 기본 강의
 - ${}를 통해 연산 가능
 
 ## 2.3 Collection For
+```dart
+    var oldFriends = ['nico','lynn'];
+    var newFriends = ['lewis', 'ralph', 'darren', for(var friends in oldFriends) "Yes $friend"];
+    print(newFriends);
+```
+- for loop로 똑같이 배열안에 데이터 입력 가능
 
 ## 2.4 Maps
+- js, ts의 map, python의 dictionary와 비슷함
 
 ## 2.5 Sets
+- 모든 값이 유니크할 떄 sets 사용
+
+```dart
+    var numbers = {1,2,3,4};
+    numbers.add(1);
+    print(numbers); // 값은 바뀌지 않음
+```
