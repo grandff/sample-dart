@@ -110,6 +110,21 @@ dart 기본 강의
 ```
 
 ## 2.2 String Interpolation
+```dart
+    var name = 'nico';
+    var greeting = 'Hello everyone, my name is $name, nice to meet you!';
+    print(greeting);
+```
+- string안에 변수를 넣고 싶으면 $를 붙이면 됨
+- single quote, double quote 상관 없음
+
+```dart
+    var name = 'nico';
+    var age = 10;
+    var greeting = 'Hello everyone, my name is $name and I\'m ${age+2}, nice to meet you!';
+    print(greeting);
+```
+- ${}를 통해 연산 가능
 
 ## 2.3 Collection For
 
