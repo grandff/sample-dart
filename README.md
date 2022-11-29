@@ -87,3 +87,32 @@ dart 기본 강의
 
     const API = '121212';
 ```
+
+
+## 2.0 Basic Data Type
+- String, boole, int, double ...
+- num 은 int도 될 수 있고, double도 될 수 있음
+
+## 2.1 Lists
+```dart
+    var numbers = [1,2,3,4];
+    List<int> numbers2 = [1,2,3,4]; // 위와 동일함
+
+    numbers.add(1); // 요소 추가
+    numbers.first;  // 첫번째 요소
+    numbers.last;   // 마지막 요소
+```
+
+```dart
+    var giveMeFive = true;
+    var numbers = [1,2,3,4, if(giveMeFive) 5];  // list 안에 조건문 등을 통해 요소 삽입 가능
+    print(numbers);
+```
+
+## 2.2 String Interpolation
+
+## 2.3 Collection For
+
+## 2.4 Maps
+
+## 2.5 Sets
