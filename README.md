@@ -188,3 +188,19 @@ dart 기본 강의
         ...
     }
 ```
+
+## 3.3 Optional Positional Parameters
+- 값이 없을 경우 처리
+
+```dart
+    String sayHello(
+        String name,
+        int age,
+        [String? country = 'cuba']  // not required 설정. default value 는 필수.
+    ) => 'Hello $name, you are $age years old from $country';
+
+    void main(){
+        var results = sayHello('nico', 12);
+        print(results);
+    }
+```
