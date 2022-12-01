@@ -164,3 +164,27 @@ dart 기본 강의
     num plus(num a, num b) => a+b;
 ```
 
+## 3.1 Named Parameters
+- 파라미터를 넘길 때 특정 파라미터의 이름을 명시해서 넘기고 싶은 경우 사용
+
+```dart
+    String sayHello({String name='anon', int age = 99, String country = 'wakanda'}){    // 매개변수에 {} 추가. 대신 기본 값 설정을 해줘야함
+        return "Hello $name, you are $age, and you come from $country";
+    }
+
+    void main(){
+        print(sayHello(
+            age : 12,
+            country : 'cuba',
+            name : 'nico'
+        ));
+    }
+```
+
+- default value를 설정 안하고 무조건 값을 받아와야 한다면 required 사용
+
+```dart
+    String sayHello({required String name, required int age, required String country}){
+        ...
+    }
+```
