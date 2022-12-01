@@ -145,3 +145,22 @@ dart 기본 강의
     numbers.add(1);
     print(numbers); // 값은 바뀌지 않음
 ```
+
+## 3.0 Defining a Function
+- void는 리턴 값 없음
+- 그 외는 선언한 타입에 맞는 값 리턴
+
+```dart
+    void sayHello(String name){
+        print("Hello $name nico to meet you! ");
+    }
+
+    String sayHello(String name){
+        return "Hello $name nice to meet you!";
+    }
+
+    String sayHello(String name) => "Hello $name nice to meet you!";    // arrow function 가능. 대신 한줄만 쓸때 가능.
+
+    num plus(num a, num b) => a+b;
+```
+
