@@ -270,3 +270,21 @@ dart 기본 강의
         player.sayHello();
     }
 ```
+
+
+## 4.1 Constructors
+- constructors 이름은 class와 동일해야함
+
+```dart
+    class Player{
+        final String name;
+        int xp;
+
+        Player(this.name, this.xp); // this로 현재 class에 선언된 변수에 넣는다고 명시함        
+    }
+
+    void main(){
+        var player = Player("nico", 1500);
+        var player2 = Player("lynn", 2000);
+    }
+```
