@@ -231,4 +231,17 @@ dart 기본 강의
 ```
 
 ## 3.5 Typedef
-- 
+- type을 직접 alias를 지정해서 만들 수 있음
+
+```dart
+    typedef ListOfInts = List<int>;
+
+    ListOfInts reverseListOfNumbers(ListOfInts list){
+        var reversed = list.reversed;
+        return reversed.toList();
+    }
+
+    void main(){
+        print(reverseListOfNumbers([1,2,3]));
+    }
+```
