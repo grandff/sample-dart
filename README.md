@@ -245,3 +245,28 @@ dart 기본 강의
         print(reverseListOfNumbers([1,2,3]));
     }
 ```
+
+## 4.0 Your First Dart Class
+- class는 type을 명시해야함
+- 같은 이름을 가진 경우를 제외하고 class 안에서 this를 쓰는걸 권고하진 않음
+
+```dart
+    class Player{
+        String name = 'nico';
+        final String firstName = 'test';    // 수정불가
+        int xp = 1500;
+
+        void sayHello(){
+            print("My name is $name");
+        }
+    }
+
+    void main(){
+        var player = Player();
+        print(player.name);
+        player.name = 'lalala';
+        print(palyer.name);
+        player.firstName = 'test2';     // error...
+        player.sayHello();
+    }
+```
