@@ -204,3 +204,31 @@ dart 기본 강의
         print(results);
     }
 ```
+
+## 3.4 QQ Operator
+- ?? / ?= 같은 연산자로 null 처리
+
+```dart
+    // BAD
+    String capitalizeName(String? name) => name.toUpperCase();  // arguments에 ?를 붙여서 null이 오면 toUpperCase가 작동안하므로 오류남
+    // GOOD
+    String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
+
+    void main(){
+        capitalizeName('nico'); // NICO
+        capitalizeName(null);
+    }
+```
+
+```dart
+    String? name;
+    name ??= 'nico';
+    name ??= 'another'; // error.. 위에서 이미 null처리를 했으므로 다시 null이 나올 수 없음
+
+    // 만약 하려면?
+    name = null;
+    name ??= 'another';
+```
+
+## 3.5 Typedef
+- 
