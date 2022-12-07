@@ -345,3 +345,34 @@ dart 기본 강의
         );
     }
 ```
+
+## 4.5 Cascade Notation
+- 생성자로 초기화한 변수 값을 변경하기 위해 cascade notation 사용
+
+```dart
+    class Player{
+        final String name;
+        int xp, age;  
+        String team;
+
+        Player({required this.name, required this.xp, required this.team, required this.age});  
+
+        void sayHello(){
+            print("My name is $name");
+        }
+    }
+
+    void main(){
+        var nico = Player(name : "nico", xp : 1200, team : "red")
+            ..name = "las"
+            ..xp = 120000
+            ..team = "blue";
+
+        // 아래처럼도 가능
+        var potato = nico
+            ..name = "las"
+            ..xp = 120000
+            ..team = "blue"
+            ..sayHello();
+    }
+```
