@@ -313,3 +313,35 @@ dart 기본 강의
         );
     }
 ```
+
+## 4.3 Named Constructor
+- class 안에 특정 명칭을 정한 생성자 사용 가능
+
+```dart
+    class Player{
+        final String name;
+        int xp, age;    // 같은 타입의 변수인 경우 한줄로도 가능함
+        String team;
+
+        Player({required this.name, required this.xp, required this.team, required this.age});  // 이건 클래스를 생성할 떄 호출되는 생성자
+
+        // named Constructor 추가
+        Player.createBluePlayer({
+            required String name, required int age
+        }) : this.age = age, this.name = name, this.team = 'blue', this.xp = 0; // : 이후에 들어오는 값들로 생성자 초기화
+
+        Player.createRedPlayer(String name, int age) : this.age = age, this.name = name, this.team = 'red', this.xp = 0;    // named 안쓰고도 가능함
+    }
+
+    void main(){
+        var player = Player.createBluePlayer(
+            name : "nico",
+            age : 21
+        );
+
+        var player2 = Player.createRedPlayer(
+            "nico",
+            21
+        );
+    }
+```
