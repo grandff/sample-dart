@@ -288,3 +288,28 @@ dart 기본 강의
         var player2 = Player("lynn", 2000);
     }
 ```
+
+## 4.2 Named Constructor Parameters
+- arguments를 너무 많이 쓰고 순서대로 나열하면 복잡해짐
+- 함수에서 했던 것 처럼 명칭을 정해서 사용 가능함
+- required 또는 default value 설정 중 하나를 해야함
+
+```dart
+    class Player{
+        final String name;
+        int xp;
+        String team;
+        int age;
+
+        Player({required this.name, required this.xp, required this.team, required this.age});
+    }
+
+    void main(){
+        var player = Player(
+            name : "nico",
+            xp : 1200,
+            team : "blue",
+            age : 21
+        );
+    }
+```
