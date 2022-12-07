@@ -376,3 +376,24 @@ dart 기본 강의
             ..sayHello();
     }
 ```
+
+## 4.6 Enums
+- flutter에서 많이 사용하게 될거임
+
+```dart
+    enum Team {red, blue};  // text 형태로 쓸 필요는 없음
+
+    class Player{
+        final String name;
+        int xp, age;  
+        Team team;
+
+        Player({required this.name, required this.xp, required this.team, required this.age});  
+    }
+
+    void main(){
+        var nico = Player(name : "nico", xp : 1200, team : Team.red);
+        var potato = nico
+            ..team = Team.blue;
+    }
+```
