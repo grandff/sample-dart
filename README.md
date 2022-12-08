@@ -397,3 +397,18 @@ dart 기본 강의
             ..team = Team.blue;
     }
 ```
+
+## 4.7 Abstract Classes
+- abstract에 추가한 메서드들은 상속받았을 때 추가가 반드시 되어야함
+
+```dart
+abstract class Human {
+    void walk();
+}
+
+class Player extends Human{
+    void walk(){
+        print("walking now...");
+    }
+}
+```
