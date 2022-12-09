@@ -450,3 +450,28 @@ void main(){
     var player = Player(team : Team.red, name : 'nico');
 }
 ```
+
+
+## 4.9 Mixins
+- flutter에서 자주 사용함
+- 생성자가 없는 클래스로 프로퍼티들을 추가할때 주로 사용
+
+```dart
+class String {
+    final double strenthLevel = 1500.99;
+}
+
+class QuickRunner{
+    void runQuick() {
+        print('ruuuun!');
+    }
+}
+
+class Player with String, QuickRunner{
+
+}
+
+void main(){
+    player.runQuick();
+}
+```
