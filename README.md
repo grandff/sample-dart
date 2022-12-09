@@ -411,4 +411,42 @@ class Player extends Human{
         print("walking now...");
     }
 }
+``` 
+
+
+## 4.8 Inheritance
+- 상속은 플러터에서 가끔 쓰임
+
+```dart
+class Human {
+    final String name;
+    Human({
+        required this.name
+    });
+    void sayHello(){
+        print("Hi my name is $name");
+    }
+}
+
+enum Team {red,blue}
+
+class Player extends Human {
+    final Team team;
+    // 상속받으면 상속받은 클래스의 생성자를 호출해야함
+    Player({
+        required this.team,
+        required String name
+    }) : super(name : name);    // super 로 접근
+
+    // 상속받은 클래스의 함수를 커스터마이징
+    @override
+    void sayHello(){
+        super.sayHello();
+        print('and i play for ${team}');
+    }
+}
+
+void main(){
+    var player = Player(team : Team.red, name : 'nico');
+}
 ```
